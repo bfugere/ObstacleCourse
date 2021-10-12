@@ -13,7 +13,10 @@ public class CollisionDetection : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        //Debug.Log(other.gameObject.name + " collided with " + name);
-        myMeshRenderer.material.color = Color.red;
+        if (other.gameObject.tag == "Player")
+        {
+            myMeshRenderer.material.color = Color.red;
+            gameObject.tag = "Bumped";
+        }
     }
 }

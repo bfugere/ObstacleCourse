@@ -8,7 +8,10 @@ public class ScoreTally : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        numberOfCollisions++;
-        Debug.Log("You bumped into: " + numberOfCollisions + " object(s).");
+        if (other.gameObject.tag != "Bumped")
+        {
+            numberOfCollisions++;
+            Debug.Log(gameObject + " bumped into " + numberOfCollisions + " object(s).");
+        }
     }
 }

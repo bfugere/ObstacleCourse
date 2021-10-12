@@ -25,7 +25,7 @@ public class Dropper : MonoBehaviour
 
     void DropObject()
     {
-        if (Time.time > dropTimer)
+        if (myMeshRenderer.enabled == false && Time.time > dropTimer)
         {
             myRigidbody.useGravity = true;
             myMeshRenderer.enabled = true;
