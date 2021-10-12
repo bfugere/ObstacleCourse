@@ -13,7 +13,7 @@ public class CollisionDetection : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.name + " collided with " + name);
+        //Debug.Log(other.gameObject.name + " collided with " + name);
         myMeshRenderer.material.color = Color.red;
     }
 }
